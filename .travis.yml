@@ -5,3 +5,13 @@ before_install:
   - docker build -t umutcyilmaz/docker-react -f Dockerfile.dev .
 script:
   - docker run umutcyilmaz/docker-react npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: frontend
+  env: "Frontend-env"
+  bucket_name: "elasticbeanstalk-us-east-1-084828596532"
+  bucket_path: frontend
+  on:
+  branch: master
