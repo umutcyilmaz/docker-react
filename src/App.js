@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          sea
+          new
         </a>
       </header>
     </div>
